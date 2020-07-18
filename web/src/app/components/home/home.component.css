@@ -1,0 +1,332 @@
+.active11
+{
+  background-color: black;
+  color: white;
+  border: none;
+  box-shadow: 2px solid red;
+}
+
+html { height: 100% }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+.login {
+  background: #ffffff;
+  border-radius: 6px;
+  height: 600px;
+  margin: 20px auto 0;
+  width: 500px;
+
+}
+#registerbox
+{
+	 background: #ffffff;
+  
+  border-radius: 6px;
+  height: 600px;
+  margin: 20px auto 0;
+  width: 500px;
+	
+}
+
+
+
+
+#register-user
+{
+	background: center left no-repeat, linear-gradient(top, #d6d7d7, #dee0e0);
+  border: 1px solid #D3D3D3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #696969;
+  height: 39px;
+  padding-left: 37px;
+  transition: box-shadow 0.3s;
+  width: 450px;
+  margin-top:10px;
+  margin-left:10px;
+}
+.icon {
+  color: black;
+  min-width: 20px;
+  text-align: center;
+}
+
+button {
+  padding:10px;
+}
+label {
+  cursor:pointer;
+}
+#form-switch {
+  display:none;
+}
+#registerform {
+  display:none;
+}
+#form-switch:checked~#registerform {
+  display:block;;
+}
+#form-switch:checked~#login-form {
+  display:none;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+}
+.login h1 {
+ 
+  border-bottom: 1px solid #D3D3D3;
+  border-radius: 6px 6px 0 0;
+  box-sizing: border-box;
+  color: #000000;
+  display: block;
+  height: 43px;
+  font: 600 14px/1 'Open Sans', sans-serif;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.2), 0 1px 0 #fff;
+}
+#formhead
+{
+	display:flex;
+	justify-conent:center;
+	border-bottom:1px solid #d3d3d3;
+	padding-bottom:5px;
+}
+label
+{
+	background-color:transparent;
+  color: #000000;
+  display: inline-block;
+  height: 20px;
+  padding-top:10px;
+  border-right:1px solid #d3d3d3;
+  width:50%;
+  font: 600 14px/1 'Open Sans', sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+#username,#password{
+  background: center left no-repeat, linear-gradient(top, #d6d7d7, #dee0e0);
+  border: 1px solid #D3D3D3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #696969;
+  height: 39px;
+  margin: 31px 0 0 29px;
+  padding-left: 37px;
+  transition: box-shadow 0.3s;
+  width: 450px;
+}
+
+input[type="password"]:focus, input[type="text"]:focus,input[type="email"]:focus {
+  box-shadow: 0 0 4px 1px rgba(55, 166, 155, 0.3);
+  outline: 0;
+}
+
+.show-password {
+  display: block;
+  height: 16px;
+  margin: 26px 0 0 28px;
+  width: 87px;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+  height: 16px;
+  opacity: 0;
+  position: relative;
+  width: 64px;
+}
+input[type="checkbox"]:checked {
+  left: 29px;
+  width: 58px;
+}
+.toggle {
+  display: block;
+  height: 16px;
+  margin-top: -20px;
+  width: 87px;
+  z-index: -1;
+}
+input[type="checkbox"]:checked + .toggle { background-position: 0 -16px }
+.forgot {
+  color: #7f7f7f;
+  display: inline-block;
+  float: right;
+  font: 12px/1 sans-serif;
+  left: -19px;
+  position: relative;
+  text-decoration: none;
+  top: 5px;
+  transition: color .4s;
+}
+.forgot:hover { color: #3b3b3b }
+input[type="submit"] {
+  width:240px;
+  height:35px;
+  display:block;
+  font-family:Arial, "Helvetica", sans-serif;
+  font-size:16px;
+  font-weight:bold;
+  color:#fff;
+  text-decoration:none;
+  text-transform:uppercase;
+  text-align:center;
+  padding-top:6px;
+  margin: 29px 0 0 29px;
+  position:relative;
+  cursor:pointer;
+  border: none; 
+  background-color: #17ba6b;
+ 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius:10px;
+}
+#register,#login
+	
+{	
+	margin-left:120px;
+	font-family:Arial, "Helvetica", sans-serif;
+  font-size:16px;
+  margin-top:5px;
+  font-weight:bold;
+	width:240px;
+  height:35px;
+	color:#fff;
+  background-color: #17ba6b;
+  cursor:pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius:10px;
+}
+#buttons
+{	
+	display:flex;
+	justify-content: center;
+	
+}
+
+p
+{
+	color:#5c5c5a;
+	text-align:center;
+}
+#button-list
+{
+	display:inline;
+}
+#footer
+{
+	text-align:center;
+}
+.button {
+    
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top:0px;
+    margin-left:10px;
+}
+
+.button2 {border-radius: 4px; background-color: #ce1804;}
+.button1 {border-radius: 4px; background-color:#235ab8;}
+.button3 {border-radius: 4px; background-color:#1a2344;}
+.button4 {border-radius: 4px; background-color:black;}
+.jumbotron{
+           
+          
+    text-align: center;
+    
+    
+}
+
+#email{
+    
+    width:300px;
+}
+
+
+.card-img-top{
+    
+    width:100%;
+}
+
+#appstoreicon{
+    
+    
+    width:200px;
+  
+}
+
+.modal-content {
+	background:url('https://www.google.com/search?rlz=1C1GCEU_enIN835IN835&tbm=isch&q=background+dark+hd&chips=q:background+dark+hd,g_1:1080p:g3hop_ho-EI%3D&usg=AI4_-kREp2z2nKUZfhu7-KsZRq_lXNegXg&sa=X&ved=0ahUKEwjB3Iel0abgAhUMFHIKHfZICrIQ4lYIMigG&biw=1137&bih=730&dpr=0.9#imgrc=XUDqEkpaw7s_sM:');
+}
+
+body{
+    
+    position: relative;
+    
+}
+#footer
+{
+margin-top:50px;
+background-color: black;
+}
+
+.context-dark, .bg-gray-dark, .bg-primary {
+color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+color: #ffffff;
+}
+.nav-list li {
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+margin-left: 0;
+opacity: 1;
+visibility: visible;
+}
+
+ul, ol {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.social-inner {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+padding: 23px;
+font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+text-transform: uppercase;
+color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+content: "\f14f";
+font: 400 21px/1 "Material Design Icons";
+color: #4d6de6;
+display: inline-block;
+vertical-align: baseline;
+margin-left: -28px;
+margin-right: 7px;
+opacity: 0;
+visibility: hidden;
+transition: .22s ease;
+}

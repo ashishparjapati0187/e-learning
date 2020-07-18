@@ -1,0 +1,40 @@
+
+
+<div  style="padding-left: 20%;padding-right: 20%;padding-top: 5%;padding-bottom: 5%;">
+  <!-- download button-->
+    <button id = "pdfmake" value = "Download Certificate" class = "btb btn-primary" (click) = "makePdf()" width = "100px" height = "100px">Download Certificate</button>
+
+  <!--certifcate-->
+  <div id = "pdfToMake">
+  <div class="card img-fluid" style="text-align:center;width:100%">
+    <img class="card-img-top" src="./assets/Images/certificate-bg.png"   alt="Card image" style="width:100%; height:100%; text-align:center; border: 10px ">
+    <div class="card-img-overlay" style="width:100%; height:100%; padding: 10%; border: 10px">
+      <div style="text-align:center;">
+          <img src="./assets/Images/certificate.png"  crossOrigin="anonymous" width="25%" height="30%" alt="Card image" >
+         
+        <span style="font-size:30px; font-family: Times, Times New Roman, Georgia, serif;color:darkolivegreen">CERTIFICATE of ACHIEVEMENT 
+         </span>
+
+      </div>
+      <div style="width:100%;padding-left: 10%;padding-right: 10%;padding-top: 2%;padding-bottom: 2%;text-align:center;">
+        <span style="font-size:20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: brown">
+          <i >This is to certify that</i>
+        </span>
+        <hr>
+        <span style="font-size:30px;font-family: Times, Times New Roman, Georgia, serif;"><b>{{userDetails.name|titlecase}}</b></span>
+        <hr>
+        <span style="font-size:20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: brown"><i>has completed the<b> innovator {{updatedstudentTest.test.testNumber}}</b></i></span> <br>
+        <span style="font-size:20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: brown">with score of  <b>{{score}}</b></span> 
+        <span style="font-size:20px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: brown"> Dated on  <b>{{updatedstudentTest.examDate|date:"yyyy-MM-dd"}}</b></span>               
+      </div>
+      <div style="float:right;">
+          <img src="./assets/Images/Signature.png"  crossOrigin="anonymous" width="15%" height="5%" alt="Card image" ><br>
+          
+        <span style="font-size:10px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:darkolivegreen">Thinklab Director</span>
+      </div>
+      
+    </div>
+  </div>
+ </div>
+</div>
+

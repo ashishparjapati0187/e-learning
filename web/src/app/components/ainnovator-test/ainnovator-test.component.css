@@ -1,0 +1,18 @@
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .card:hover{
+        transform: scale(0.98);
+    }
+
+    .background-image-page{
+        background: url("http://designatprinting.com/wp-content/uploads/8364797-question-marks-of-different-colors-drawn-on-a-white-background-stock-photo-13.jpg");
+        background-repeat: no-repeat;
+       
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    

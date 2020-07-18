@@ -1,0 +1,41 @@
+<!-- modal --> 
+<div class="container-fluid" style="padding: 0px;">
+    <div class="row" id = "card1">
+     
+      <div class="col-12">
+  <br>
+  <div class="card text-white bg-dark mb-3" style="cursor:pointer">
+    <img src="https://www.savision.com/wp-content/uploads/2018/01/solarwinds-quiz-banner-linkedin.jpg" class="card-img-top" alt="image-quiz"(click)="setUp(content)" >
+    <div class="card-overlay" style="text-align: center;">
+      <!-- <h5 class="card-title">Take The Quiz</h5>
+      <p class="card-text">You can start the test after your last certification, Click the below button to start the test. </p> -->
+      <!-- <button class="btn btn-success">Take test</button> -->
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- modal to start test -->
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Instruction</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+      <ul>
+        <li>Total number of Questions: 10.</li>
+        <li>Each Question carry 1 marks.</li>
+        <li>No negative marking.</li>
+        <li>DO NOT refresh the page.</li>
+        <li>All the best:-).</li>
+      </ul>
+      <div class="modal-footer">
+          <button (click)="takeQuiz()" class="btn btn-primary">Start test</button>
+      </div>
+        
+    </div>
+  </ng-template>

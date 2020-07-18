@@ -1,0 +1,148 @@
+
+<div style="text-align: center; padding-bottom: 5%;" class="background-image-page">
+
+  <div class="container-fluid">
+    <div id="content">
+      <div class="container-fluid">
+        <div class="card" data-toggle="tooltip" data-placement="top" title="Tap to open" style="width: 25%; display: inline-table; margin-left: 2%; margin-top: 5% ; cursor: pointer;">
+          <img class="card-img-top" src="https://cdn1.iconfinder.com/data/icons/survey/500/Questionnaire_Archery-512.png" (click)="onClick(1)"
+            alt="Card image" style="width: 100%">
+          <div class="card-footer">
+            <div *ngIf="check(1); else elseBlock1">
+              <p class="card-title mbr-fonts-style align-center display-5">
+                set A
+                <span style="float: right;" id="sp" class="active"  (click)="activated(1)"><i class="fa fa-toggle-on" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Click to activate" style="font-size:xx-large"></i></span>
+              </p>
+
+            </div>
+
+            <ng-template #elseBlock1>
+
+              <p class="card-title mbr-fonts-style align-center display-5">
+                set A
+                <span style="float: right;" id="sp" class="inactive" (click)="activated(1)"><i class="fa fa-toggle-off" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Click to activate" style="font-size:xx-large"></i></span>
+              </p>
+            </ng-template>
+            <p>
+              <span class="card-text" style="text-align: left;">Available Questions: {{sizeArray[0]}}</span>
+            </p>
+          </div>
+        </div>
+        <div class="card" data-toggle="tooltip" data-placement="top" title="Tap to open" style="width: 25%; display: inline-table; margin-left: 2%; margin-top: 5% ; cursor: pointer;">
+          <img class="card-img-top" src="https://cdn1.iconfinder.com/data/icons/survey/500/Questionnaire_Archery-512.png" (click)="onClick(2)"
+            alt="Card image" style="width: 100%">
+          <div class="card-footer">
+
+            <div *ngIf="check(2); else elseBlock2">
+              <p class="card-title mbr-fonts-style align-center display-5">
+                set B
+                <span style="float: right;" id="sp" class="active" (click)="activated(2)"><i class="fa fa-toggle-on" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Click to activate" style="font-size:xx-large"></i></span>
+              </p>
+
+            </div>
+
+            <ng-template #elseBlock2>
+
+              <p class="card-title mbr-fonts-style align-center display-5">
+                set B
+                <span style="float: right;" id="sp" class="inactive" (click)="activated(2)"><i class="fa fa-toggle-off" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Click to activate" style="font-size:xx-large"></i></span>
+              </p>
+            </ng-template>
+
+            <p>
+              <span style="text-align: left;">Available Questions: {{sizeArray[1]}}
+              </span>
+            </p>
+
+          </div>
+        </div>
+        <div class="card" data-toggle="tooltip" data-placement="top" title="Tap to open" style="width: 25%; display: inline-table; margin-left: 2%; margin-top: 5%; cursor: pointer;">
+          <img class="card-img-top" src="https://cdn1.iconfinder.com/data/icons/survey/500/Questionnaire_Archery-512.png" (click)="onClick(3)"
+            alt="Card image" style="width: 100%">
+          <div class="card-footer">
+            <div *ngIf="check(3); else elseBlock3">
+              <p class="card-title mbr-fonts-style align-center display-5">
+                set C
+                <span style="float: right;" id="sp" class="active" (click)="activated(3)"><i class="fa fa-toggle-on" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Click to activate" style="font-size:xx-large"></i></span>
+              </p>
+
+            </div>
+
+            <ng-template #elseBlock3>
+
+              <p class="card-title mbr-fonts-style align-center display-5">
+                set C
+                <span style="float: right;" id="sp" class="inactive" (click)="activated(3)"><i class="fa fa-toggle-off" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Click to activate" style="font-size:xx-large"></i></span>
+              </p>
+            </ng-template>
+
+
+            <p>
+              <span style="text-align: left;">Available Questions: {{sizeArray[2]}}
+              </span>
+            </p>
+
+          </div>
+        </div>
+
+        <div class="card" data-toggle="tooltip" data-placement="top" title="Tap to open" style="width: 25%; display: inline-table; margin-left: 2%; margin-top: 5%; cursor: pointer;">
+          <img class="card-img-top" src="https://cdn1.iconfinder.com/data/icons/survey/500/Questionnaire_Archery-512.png" (click)="onClick(4)"
+            alt="Card image" style="width: 100%">
+          <div class="card-footer">
+            <div *ngIf="check(4); else elseBlock4">
+              <p class="card-title mbr-fonts-style align-center display-5">
+                set D
+                <span style="float: right;" id="sp" class="active" (click)="activated(4)"><i class="fa fa-toggle-on" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Click to activate" style="font-size:xx-large"></i></span>
+              </p>
+
+            </div>
+
+            <ng-template #elseBlock4>
+
+              <p class="card-title mbr-fonts-style align-center display-5">
+                set D
+                <span style="float: right;" id="sp" class="inactive" (click)="activated(4)"><i class="fa fa-toggle-off" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Click to activate" style="font-size:xx-large"></i></span>
+              </p>
+            </ng-template>
+            <p>
+              <span style="text-align: left;"> Available Questions: {{sizeArray[3]}}
+              </span>
+            </p>
+
+          </div>
+        </div>
+        <div class="card" data-toggle="tooltip" data-placement="top" title="Tap to open" style="width: 25%; display: inline-table; margin-left: 2%; margin-top: 5%; cursor: pointer;">
+          <img class="card-img-top" src="https://cdn1.iconfinder.com/data/icons/survey/500/Questionnaire_Archery-512.png" (click)="onClick(5)"
+            alt="Card image" style="width: 100%">
+          <div class="card-footer">
+            <div *ngIf="check(5); else elseBlock5">
+              <p class="card-title mbr-fonts-style align-center display-5">
+                set D
+                <span style="float: right;" id="sp" class="active" (click)="activated(5)"><i class="fa fa-toggle-on" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Click to activate" style="font-size:xx-large"></i></span>
+              </p>
+
+            </div>
+
+            <ng-template #elseBlock5>
+
+              <p class="card-title mbr-fonts-style align-center display-5">
+                set D
+                <span style="float: right;" id="sp" class="inactive" (click)="activated(5)"><i class="fa fa-toggle-off" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Click to activate" style="font-size:xx-large"></i></span>
+              </p>
+            </ng-template>
+            <p>
+              <span style="text-align: left;"> Available Questions: {{sizeArray[3]}}
+              </span>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>
+

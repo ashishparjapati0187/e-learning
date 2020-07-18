@@ -1,0 +1,106 @@
+
+<!-- stufdent home page -->
+<div class="container-fluid">
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" [routerLink]="['/studentLink/userHome']">
+              <img src="https://static.wixstatic.com/media/65543e_0e8a3a4d57cc4235aead6a00efbe1e46.png/v1/fill/w_195,h_234,al_c,usm_0.66_1.00_0.01/65543e_0e8a3a4d57cc4235aead6a00efbe1e46.png" width="20%" height="10%" alt="Card image" >&nbsp;ThinkLab
+      </a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              
+
+           
+       </ul>
+            <ul class="navbar-nav ">
+
+                <li class="nav-item active">
+                 <a class="nav-link inactive" [routerLink]="['/studentLink/results']">My Results <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                   <a class="nav-link inactive" [routerLink]="['/studentLink/allCertificates']">My Certificates <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown " >
+                    <p class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"  aria-expanded="false" style="color: aliceblue;font-weight: bold;">
+                        {{data.name}}&nbsp;<i class="fa fa-user-circle-o" aria-hidden="true" ></i></p>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <p class="dropdown-item"  aria-haspopup="true" aria-expanded="false" (click)="logout()">                     
+                                Logout&nbsp;<i class="fa fa-sign-out" aria-hidden="true" ></i></p>
+                        </div>
+                </li>
+                <!-- PROFILE DROPDOWN - scrolling off the page to the right -->
+                <!-- <li class="nav-item">   <span class = "glyphicon glyphicon-login"></span>
+  
+                    
+                </li> -->
+            </ul> 
+
+        </div>
+    </div>
+</nav>
+
+</div>
+
+<div class="container-fluid">
+<router-outlet></router-outlet> <!-- routing to this page -->
+</div>
+
+
+
+<!-- footer page -->
+<div id = "footer">
+  <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+          <div class="container">
+            <div class="row row-30">
+              <div class="col-md-4 col-xl-5">
+                <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+                  <p style = "padding-top:20px;">Think Lab is a Webapp for students who feel innovation is neccessary to survive</p>
+                  <!-- Rights-->
+                  <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Cognizant</span><span>. </span><span>All Rights Reserved.</span></p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h5 style = "margin-top:15px;">Contacts</h5>
+                <dl class="contact-list">
+                  <dt>Address:</dt>
+                  <dd>ASV Suntech Park, Chennai</dd>
+                </dl>
+                <dl class="contact-list">
+                  <dt>email:</dt>
+                  <dd><a href="mailto:#">abc@cognizant.com</a></dd>
+                </dl>
+                <dl class="contact-list">
+                  <dt>phones:</dt>
+                  <dd><a href="tel:#">+91 9711000110</a> <span>or</span> <a href="tel:#">+91 9512131415</a>
+                  </dd>
+                </dl>
+              </div>
+              <div class="col-md-4 col-xl-3">
+                <h5 style = "margin-top:15px;">Links</h5>
+                <ul class="nav-list">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Top 10 innovators</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Log Out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters social-container">
+            <div class="col"><a class="social-inner" href="#" style = "background-color:#4267b2;"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
+            <div class="col"><a class="social-inner" href="#" style = "background-color:#231f20;" ><span class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
+            <div class="col"><a class="social-inner" href="#"  style = "background-color:#38A1F3;"><span class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
+            <div class="col"><a class="social-inner" href="#" style = "background-color:#DD4B39;"><span class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
+          </div>
+        </footer>
+  
+  
+  </div>
+  

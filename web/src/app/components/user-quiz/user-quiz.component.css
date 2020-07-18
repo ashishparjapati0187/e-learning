@@ -1,0 +1,16 @@
+.input-hidden {
+    position: absolute;
+    left: -9999px;
+  }
+
+  input[type=radio]:checked + label>span {
+    background-color: darkgreen;
+  }
+
+  .answered
+  {
+    background-color: green;
+    color: white;
+  }
+
+  

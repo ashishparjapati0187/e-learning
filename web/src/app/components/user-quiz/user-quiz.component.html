@@ -1,0 +1,69 @@
+<!-- user quiz or table -->
+<br>
+<div class="container-fluid">
+
+    <h3 style="text-align: center">Progress</h3>
+    <div class="progress">
+        
+        <div class="progress-bar bg-info" role="progressbar" [style.width]="progress+'%'" aria-valuenow="progress" aria-valuemin="0" aria-valuemax="100">{{progress}}%</div>
+    </div>
+
+    
+    <hr>
+    <div class="card">
+        <div class="card-body" style="background-color:rgb(47, 51, 46);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+          <h5 class="card-title" style="text-decoration: underline;color: white">Question {{s}}.</h5>
+          <p style="font-weight: bold;color: white"> {{question.question|titlecase}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" >
+            <input class="input-hidden" type="radio" id="answer1" name="answer1" [(ngModel)]="answer.answerId" value="1" >
+
+            <label for="answer1">&nbsp;
+                <span class="badge badge-secondary" >A</span>&nbsp;{{question.option1|titlecase}}
+            </label>
+          
+          </li>
+          <li class="list-group-item" >&nbsp;
+            <input class="input-hidden" type="radio" id="answer2" name="answer2" [(ngModel)]="answer.answerId" value="2" >
+            <label for="answer2">
+                <span class="badge badge-secondary" >B</span>&nbsp;{{question.option2|titlecase}}
+            </label>
+          </li>
+          <li class="list-group-item" >&nbsp;
+            <input class="input-hidden" type="radio" id="answer3" name="answer3" [(ngModel)]="answer.answerId" value="3" >
+            <label for="answer3">
+                <span class="badge badge-secondary" >C</span>&nbsp;{{question.option3|titlecase}}
+            </label>
+          </li>
+          <li class="list-group-item" >&nbsp;
+            <input class="input-hidden" type="radio" id="answer4" name="answer4" [(ngModel)]="answer.answerId" value="4" >
+            <label for="answer4">
+                <span class="badge badge-secondary" >D</span>&nbsp;{{question.option4|titlecase}}
+            </label>
+          </li>  
+        </ul>
+      </div>
+      <br>
+      
+      <br>
+      <div style="text-align:center;">
+     <button (click)="save()" class="btn btn-success">Confirm</button><!-- confirm answer button -->
+      &nbsp;<button (click)="reset()" class="btn btn-dark">Reset </button><!-- reset answer button -->
+      </div>
+      <div style="float: right;">
+          <ul class="pagination " >
+            <li (click)="previous()" class="page-item page-link" *ngIf="pFlag">Previous &nbsp; <i class="fa fa-backward" aria-hidden="true"></i></li>
+              <span *ngFor="let item of traverse;">
+                  <li class="page-item page-link answered"  *ngIf="checkAnswered(item) else elseBlock" (click)="changeQuestion(item)" >{{item+1}}</li>    
+                  <ng-template #elseBlock>
+                      <li class="page-item page-link" (click)="changeQuestion(item)" >{{item+1}}</li> 
+                    </ng-template>
+                </span>
+            <li (click)="next()" class="page-item page-link" *ngIf="nFlag else elseBlock1"><i class="fa fa-forward" aria-hidden="true"></i>&nbsp;Next </li>
+            <ng-template #elseBlock1><button (click)="submit()" class="page-item page-link" >Submit</button></ng-template>
+              </ul>
+
+      </div>
+      <hr>
+    </div>

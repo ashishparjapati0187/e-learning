@@ -1,0 +1,127 @@
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://webkul.com/blog/wp-content/uploads/2014/05/Prestashop-Marketplace-Order-Statistics-Blog-Post-Banner.png" alt="Los Angeles" width="100%" >   
+   		<br>
+   		<br>
+   	
+    </div>
+ 
+</div>
+</div>
+    
+
+
+<!-- <div style="text-align:right"><button class="btn btn-info" (click)="edit(question)">Add New Question</button></div> -->
+<!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
+      <div class="container">
+          <p> <span style="text-align:left;font-size: larg"><strong>Test Id : {{setId}}</strong></span>&nbsp;<Button class="btn btn-success" style="font-size: smaller" (click)="addQuestion()">Add Question</Button></p>
+          <br>
+      <div class="row">
+    <div class="col-sm-3 col-md-4" style="padding:1%;" *ngFor="let question of questions">
+
+
+
+<div class="card" style="width:90%;height:90%;display:inline-table;">
+    <div class="card-body" style="background-color:rgb(79, 215, 218);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    ">
+      <h5 class="card-title" style="text-decoration: underline">Question</h5>
+      <p style="font-weight: bold">{{question.question|titlecase}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" [class.activeList]="check(question,1)"><span class="badge badge-secondary" >A</span>&nbsp;{{question.option1|titlecase}}&nbsp;<i class="fa fa-check" style="color: darkgreen" aria-hidden="true" *ngIf="check(question,1)"></i></li>
+      <li class="list-group-item" [class.activeList]="check(question,2)"><span class="badge badge-secondary" >B</span>&nbsp;{{question.option2|titlecase}}&nbsp;<i class="fa fa-check" style="color: darkgreen" aria-hidden="true" *ngIf="check(question,2)"></i></li>
+      <li class="list-group-item" [class.activeList]="check(question,3)"><span class="badge badge-secondary" >C</span>&nbsp;{{question.option3|titlecase}}&nbsp;<i class="fa fa-check" style="color: darkgreen" aria-hidden="true" *ngIf="check(question,3)"></i></li>
+      <li class="list-group-item" [class.activeList]="check(question,4)"><span class="badge badge-secondary" >D</span>&nbsp;{{question.option4|titlecase}}&nbsp;<i class="fa fa-check" style="color: darkgreen" aria-hidden="true" *ngIf="check(question,4)"></i></li>  
+    </ul>
+    <div class="card-body" style="text-align: center">
+        <button class="btn btn-secondary" (click)="edit(question,content)">Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+       &nbsp;&nbsp; <button class="btn btn-danger" (click)="delete(question)">Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<!-- odal for question set -->
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Edit Question</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <form>
+
+          <input type="hidden" class="form-control" name="questionId" [(ngModel)]="equestion.questionId"  >
+            <div class="form-group">
+              <label for="inputEmail3" style="font-weight:bold">Question</label>              
+              <input type="text" class="form-control" name="question" [(ngModel)]="equestion.question" >
+            </div>
+            <div class="form-group ">
+                <label for="inputEmail3" style="font-weight:bold">Option 1</label>
+             
+                <input type="text" class="form-control" name="option1" [(ngModel)]="equestion.option1">
+
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" style="font-weight:bold">Option 2</label>
+              
+                <input type="text" class="form-control" name="option2" [(ngModel)]="equestion.option2">
+
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" style="font-weight:bold">Option 3</label>
+             
+                <input type="text" class="form-control" name="option3" [(ngModel)]="equestion.option3">
+              </div>
+            
+            <div class="form-group">
+                <label for="inputEmail3" style="font-weight:bold">Option 4</label>
+              
+                <input type="text" class="form-control" name="option4" [(ngModel)]="equestion.option4">
+
+            </div>
+            <fieldset class="form-group">
+                <legend  style="font-weight:bold">Correct Answer</legend>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="answer1" [(ngModel)]="equestion.option.answerId" value="1" >
+                    <label class="form-check-label" for="gridRadios1">
+                      option 1
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="answer2" [(ngModel)]="equestion.option.answerId"  value="2" >
+                    <label class="form-check-label" for="gridRadios1">
+                      option 2
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="answer3" [(ngModel)]="equestion.option.answerId"  value="3" >
+                    <label class="form-check-label" for="gridRadios1">
+                      option 3
+                    </label>
+                  </div>
+                  
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="answer4" [(ngModel)]="equestion.option.answerId" value="4" >
+                    <label class="form-check-label" for="gridRadios1">
+                      option 4
+                    </label>
+                  </div>
+          
+            </fieldset>
+            
+            <!-- modal footer-->
+            <div class="modal-footer">
+                <button (click)="saveEdit()" class="btn btn-primary">Update</button>
+            </div>
+          </form>
+    </div>
+  </ng-template>
+

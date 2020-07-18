@@ -1,0 +1,35 @@
+
+<!-- all certificate cards of a student -->
+
+<div class="container-fluid" style="padding-top: 5%;padding-bottom: 5%;padding-left: 10%">
+
+  <div class="card" style="width:100%;height:100%;display:inline-table;">
+    <div class="card-footer" style="background-color:rgba(36, 33, 33, 0.822);box-shadow: 0 6px 8px 0 rgba(243, 243, 243, 0.897), 0 6px 20px 0 rgb(255, 255, 255);">
+    <span style="font-size:30px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:White ;padding-left: 5%;">Quiz Id</span>
+    &nbsp;&nbsp;&nbsp;
+    <span style="font-size:30px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: White;padding-left: 19%;">Name</span>&nbsp;&nbsp;&nbsp;
+    <span style="font-size:30px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: White;padding-left: 13%;">Score</span>&nbsp;&nbsp;&nbsp;
+    <span style="font-size:30px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: White;padding-left: 10%;">Date of Test</span>&nbsp;&nbsp;&nbsp;
+    
+    </div>
+    </div>
+<div *ngIf="flag; else elseBlock1">
+<div class="row" style="padding:1%;" *ngFor="let tst of  data">
+<div class="card" style="width:100%;height: 60%;  display:inline-table;">
+<div class="card-footer" style="background-color:white;box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<!-- image -->
+<img src="https://cdn0.iconfinder.com/data/icons/graduate/40/certificate-01-512.png" width="5%" height="10%" alt="Card image" >&nbsp;&nbsp;&nbsp;
+<span style="font-size:25px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:black ;">Innovator {{tst.test.testNumber}}</span>
+&nbsp;&nbsp;&nbsp;
+<span style="font-size:25px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: black;padding-left: 10%;">{{tst.userDetails.name}}</span>&nbsp;&nbsp;&nbsp;
+<span style="font-size:25px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: black;padding-left: 10%;">{{tst.score}}</span>&nbsp;&nbsp;&nbsp;
+<span style="font-size:25px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: black;padding-left: 12%;">{{tst.examDate}}</span>&nbsp;&nbsp;&nbsp;
+
+</div>
+</div>
+</div>
+</div>
+<!-- if no certificate exists -->
+<ng-template #elseBlock1><h1 style="text-align: center;font-weight: bold">No Certificate to show.</h1></ng-template>
+
+</div>

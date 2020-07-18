@@ -1,0 +1,121 @@
+<!-- carousel-->
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://restlesspilgrim.net/blog/wp-content/uploads/2015/04/BannerQuestions.jpeg" alt="Los Angeles" width="100%" >   
+
+    </div>
+ 
+</div>
+</div>
+
+		<div class="container-fluid">
+      <br>
+        <p> <span style="text-align:center;font-size: larg"><strong>Question Set</strong></span>&nbsp;<Button class="btn btn-success" style="font-size: smaller" (click)="addQuestion(content)">Add New Question</Button></p>
+        <br>
+        <!-- question layout -->
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Question</th>
+      <th scope="col">Option1</th>
+      <th scope="col">Option2</th>
+      <th scope="col">Option3</th>
+      <th scope="col">Option4</th>
+      <th scope="col">Correct_Answer</th>
+      <th scope="col" >Operation</th>
+    </tr>
+  </thead>
+  <tbody>
+  <!-- see all questions -->
+<tr *ngFor="let question of questionSet">
+<td>{{ question.question}}</td><td>{{question.option1}}</td><td>{{question.option2}}</td>
+<td>{{question.option3}}</td><td>{{question.option4}}</td>
+<td>{{question.option.answerId}}</td>
+<td><button  class="btn btn-secondary" (click)="edit(question,content)">Edit</button></td>
+
+</tr>
+    
+</tbody>
+</table>
+
+</div>
+
+<!-- to add a question in a modal -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Question</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <form>
+
+        <input type="hidden" class="form-control" name="questionId" [(ngModel)]="equestion.questionId"  >
+          <div class="form-group">
+            <label for="inputEmail3" style="font-weight:bold">Question</label>              
+            <input type="text" class="form-control" name="question" [(ngModel)]="equestion.question" >
+          </div>
+          <div class="form-group ">
+              <label for="inputEmail3" style="font-weight:bold">Option 1</label>
+           
+              <input type="text" class="form-control" name="option1" [(ngModel)]="equestion.option1">
+
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" style="font-weight:bold">Option 2</label>
+            
+              <input type="text" class="form-control" name="option2" [(ngModel)]="equestion.option2">
+
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" style="font-weight:bold">Option 3</label>
+           
+              <input type="text" class="form-control" name="option3" [(ngModel)]="equestion.option3">
+            </div>
+          
+          <div class="form-group">
+              <label for="inputEmail3" style="font-weight:bold">Option 4</label>
+            
+              <input type="text" class="form-control" name="option4" [(ngModel)]="equestion.option4">
+
+          </div>
+          <fieldset class="form-group">
+              <legend  style="font-weight:bold">Correct Answer</legend>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="answer1" [(ngModel)]="equestion.option.answerId" value="1" >
+                  <label class="form-check-label" for="gridRadios1">
+                    option 1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="answer2" [(ngModel)]="equestion.option.answerId"  value="2" >
+                  <label class="form-check-label" for="gridRadios1">
+                    option 2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="answer3" [(ngModel)]="equestion.option.answerId"  value="3" >
+                  <label class="form-check-label" for="gridRadios1">
+                    option 3
+                  </label>
+                </div>
+                
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="answer4" [(ngModel)]="equestion.option.answerId" value="4" >
+                  <label class="form-check-label" for="gridRadios1">
+                    option 4
+                  </label>
+                </div>
+        
+          </fieldset>
+          
+          <div class="modal-footer">
+              <button (click)="saveEdit()" class="btn btn-primary">Update</button>
+          </div>
+        </form>
+  </div>
+</ng-template>
+

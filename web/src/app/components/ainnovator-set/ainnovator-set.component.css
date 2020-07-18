@@ -1,0 +1,25 @@
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ .active {
+     color: green;
+}
+.inactive {
+    color:black;
+}
+
+#sp{
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+}
+.card:hover{
+    transform: scale(0.98);
+}
+
+.background-image-page{
+    background: url("https://www.lightyourmind.com/wp-content/uploads/2017/11/Books-Background-Hd-Wallpaper.jpg");
+    background-repeat: no-repeat;
+   
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}

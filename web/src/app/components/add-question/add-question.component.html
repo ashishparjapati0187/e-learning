@@ -1,0 +1,37 @@
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <!-- image -->
+      <img src="https://restlesspilgrim.net/blog/wp-content/uploads/2015/04/BannerQuestions.jpeg" alt="Los Angeles" width="100%" >   
+
+    </div>
+ 
+</div>
+</div>
+<!-- html to show questions -->
+		<div class="container-fluid">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Question</th>
+      <th scope="col">Option1</th>
+      <th scope="col">Option2</th>
+      <th scope="col">Option3</th>
+      <th scope="col">Option4</th>
+      <th scope="col">Correct_Answer</th>
+      <th scope="col">Operation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- print or loop around questions -->
+<tr *ngFor="let question of questionSet">
+<td>{{ question.question}}</td><td>{{question.option1}}</td><td>{{question.option2}}</td>
+<td>{{question.option3}}</td><td>{{question.option4}}</td>
+<td>{{question.option.answerId}}</td><td>{{question.option.answerValues}}</td>
+<td><button  class="btn btn-secondary" (click)="addToSet(question)">Add To Set</button></td>
+</tr>
+    
+</tbody>
+</table>
+
+</div>
